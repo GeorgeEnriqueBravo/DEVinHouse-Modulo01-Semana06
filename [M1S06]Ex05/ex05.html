@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S06- Ex05</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Semana 06 - Exercício 05</h1>
+    </header>
+
+    <section>
+        <div>
+            <strong>async - await</strong>
+        </div>
+        <hr>
+        <div>
+            <p>Altere as funções abaixo usando <strong>async-await</strong> para retorno e tratamento de promises:</p>
+
+            <div class="code">
+                <code>              
+                    function obterClienteNoBancoDeDados(idCliente) { <br>
+                        &emsp; &emsp; return new Promise( (resolve, reject) => { <br>
+                            &emsp; &emsp; &emsp; &emsp; const cliente = { nome: 'bruce wayne', id: idCliente }; <br>
+                            &emsp; &emsp; &emsp; &emsp;resolve(cliente); <br>
+                        }); <br>
+                    } <br><br>
+                    
+                    function processar() { <br>
+                        &emsp; &emsp; obterClienteNoBancoDeDados(7) <br>
+                        &emsp; &emsp; &emsp; .then(cliente => console.log(cliente)); <br>
+                    } <br><br>
+                    
+                    processar();
+                </code>
+            </div>
+
+        </div>
+        <hr>
+        <div id="res">
+            <strong>Resultado:</strong> <br><br>
+        </div>
+        <hr>
+        <div>
+            <p>
+                <a href="https://github.com/GeorgeEnriqueBravo/DEVinHouse-Modulo01-Semana05/blob/main/%5BM1S03%5DEx03/script.js" target="_blank" rel="noopener noreferrer">Clique aqui</a>
+                para visuallizar o código do meu exercício.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p>Aperte a tecla "<strong>F12</strong>" para visualizar o resultado no console do seu navegador.</p>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://github.com/GeorgeEnriqueBravo" target="_blank" rel="noopener noreferrer">
+        <p>by George Bravo</p>
+        </a>
+    </footer>
+    
+    <script src="app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S06- Ex03</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Semana 06 - Exercício 03</h1>
+    </header>
+
+    <section>
+        <div>
+            <strong>Promise (all)</strong>
+        </div>
+        <hr>
+        <div>
+            <p>Para aprovação de um empréstimo, um banco usa as funções descritas abaixo: <br>
+                - Aprovação do cadastro pessoal <br>
+                - Aprovação do valor solicitado <br>
+                Ambas retornam uma promise para fazer o processamento em segundo plano (no código, este processamento está simulado).:</p>
+
+            <p>Para o cliente instanciado no código abaixo, foram executadas ambas as funções e criadas variáveis para armazenar este retorno.</p>
+
+            <p>Usando o método '<strong>Promise.all()</strong>', recupere o resultado de ambas as promises e imprima 'APROVADO' ou 'REPROVADO', conforme os resultados das promises forem resolvidos ou rejeitados.</p>
+
+            <p>Por fim, imprima a frase 'Fim do Processamento', qualquer que seja o resultado (resolve ou reject) das promises ('finally').</p>
+
+            <div class="code">
+                <code>
+                    function aprovarDadosCadastrais( cliente ) { <br>
+                        &emsp; return new Promise( (resolve, reject) => { <br>
+                            &emsp; &emsp; if (cliente.cpf === 11111111111) <br>
+                            &emsp; &emsp; &emsp; resolve(true); <br>
+                            &emsp; &emsp; else <br>
+                            &emsp; &emsp; &emsp; reject(false); <br>
+                        &emsp; }); <br>
+                    } <br><br>
+                    
+                    function aprovarValorSolicitado( cliente, valor ) { <br>
+                        &emsp; return new Promise( (resolve, reject) => { <br>
+                            &emsp; &emsp; if (cliente.margem >= valor) <br>
+                            &emsp; &emsp; &emsp; resolve(true); <br>
+                            &emsp; &emsp; else <br>
+                            &emsp; &emsp; &emsp; reject(false); <br>
+                        &emsp; }); <br>
+                    } <br><br>
+                    
+                    const cliente = { cpf: 11111111111, nome: 'Calleri', margem: 1000.0 }; <br>
+                    const aprovacaoCadastro = aprovarDadosCadastrais(cliente); <br>
+                    const aprovacaoValor = aprovarValorSolicitado(cliente, 300.0); <br><br>
+                    
+                    // continue com o tratamento dos resultados de ambas as promises...
+                </code>
+            </div>
+
+        </div>
+        <hr>
+        <div id="res">
+            <strong>Resultado:</strong> <br><br>
+        </div>
+        <hr>
+        <div>
+            <p>
+                <a href="">Clique aqui</a>
+                para visuallizar o código do meu exercício.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p>Aperte a tecla "<strong>F12</strong>" para visualizar o resultado no console do seu navegador.</p>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://github.com/GeorgeEnriqueBravo" target="_blank" rel="noopener noreferrer">
+        <p>by George Bravo</p>
+        </a>
+    </footer>
+    
+    <script src="app.js" type="module"></script>
+</body>
+</html>

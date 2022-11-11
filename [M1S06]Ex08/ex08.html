@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S06- Ex08</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Semana 06 - Exercício 08</h1>
+    </header>
+
+    <section>
+        <div>
+            <strong>Fetch</strong>
+        </div>
+        <hr>
+        <div>
+            <p>Existe a API 'Random User Generator', que gera usuários fakes para fins de testes e protótipos. <br>
+            Vamos usá-la para praticar e consumir APIs com promises.</p>
+
+            <p>A URL da API é esta abaixo, onde o argumento 'results' representa a quantidade de resultados que queremos retornar: <br>
+            <a href="https://randomuser.me/api/?results=4" target="_blank" rel="noopener noreferrer">https://randomuser.me/api/?results=4</a></p>
+
+            <p>Verifique a documentação e exemplo de retorno em: <br>
+            <a href="https://randomuser.me/documentation#howto" target="_blank" rel="noopener noreferrer">Random User Generator | Documentation</a>, ou faça uma chamada para a API (no navegador ou console) para verificar um exemplo de resultado.</p>
+
+            <p>Com base no json de retorno, monte uma página web com layout semelhante ao <strong>anexo</strong>, contendo dados de usuários de sistema com
+            foto, título, nome, sobrenome, e-mail e endereço completo. <br>
+            O layout (css) é livre, desde que apresente as informações solicitadas.</p>
+
+            <p><strong>Dicas:</strong></p>
+
+            <ol type="a">
+                <li>Perceba que os resultados ficam dentro do campo 'results' do json de retorno;</li><br>
+                <li>Para a foto, use a versão grande do campo 'picture': 'large' (grande);</li><br>
+                <li>Para o nome, use os campos de 'name': 'title' (título), 'first' (nome), 'last' (sobrenome);</li><br>
+                <li>Para o endereço, use os campos de 'location': 'street' (rua), 'city' (cidade), 'state' (estado), 'country' (país);</li><br>
+                <li>Como é uma chamada remota para o serviço, o resultado pode demorar alguns segundos para retornar.</li>
+            </ol>
+
+            <p><strong>Extra:</strong></p>
+
+            <p>Adicione um campo para que o usuário selecione a quantidade de itens que deseja exibir</p>
+        <hr>
+        <div><strong>Resultado:</strong> </div>
+        <div id='geral'> 
+            <div id="divImg">
+                <img id="imagem">
+            </div>
+
+            <div id="res">
+                <p id="nome"></p>
+                <p id="email"></p>
+                <p id="endereco"></p>
+            </div>
+        </div>
+        <div id="botoes">
+            <input class="botoes" type="checkbox" name="checkNome" id="checkNome" value="nome" checked>
+            <label for="checkNome">Nome</label>
+
+            <input class="botoes" type="checkbox" name="checkEmail" id="checkEmail" value="email" checked>
+            <label for="checkEmail">E-mail</label>
+
+            <input class="botoes" type="checkbox" name="checkEnd" id="checkEnd" value="end" checked>
+            <label for="checkEnd">Endereço</label>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <p>
+                <a href="https://github.com/GeorgeEnriqueBravo/DEVinHouse-Modulo01-Semana05/blob/main/%5BM1S03%5DEx03/script.js" target="_blank" rel="noopener noreferrer">Clique aqui</a>
+                para visuallizar o código do meu exercício.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p>Aperte a tecla "<strong>F12</strong>" para visualizar o resultado no console do seu navegador.</p>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://github.com/GeorgeEnriqueBravo" target="_blank" rel="noopener noreferrer">
+        <p>by George Bravo</p>
+        </a>
+    </footer>
+    
+    <script src="app.js" type="module"></script>
+</body>
+</html>

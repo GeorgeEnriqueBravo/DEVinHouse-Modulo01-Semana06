@@ -14,7 +14,7 @@ section {
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.342);
 }
-div {
+div, p.txt {
     text-align: center;
 }
 div.code {
@@ -44,4 +44,8 @@ footer a {
 }
 footer p {
     text-align: center;
+}
+button {
+    font-size: medium;
+    padding: 5px;
 }

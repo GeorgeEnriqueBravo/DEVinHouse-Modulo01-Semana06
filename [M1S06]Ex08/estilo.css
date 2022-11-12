@@ -33,18 +33,19 @@ span.code {
 div ol li, p {
     text-align: left;
 }
-div#geral {
+div.geral {
     display: flex;
     justify-content: flex-start;
     background-color: rgb(70, 142, 236);
     color: white;
     font-size: 16.5px;
     border-radius: 20px;
+    margin: 5px;
 }
-div#divImg {
+div.divImg {
     width: 20%;
 }
-div#res {
+div.res {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 15px;
@@ -53,7 +54,7 @@ div#res {
 div#botoes {
     margin-top: 10px;
 }
-img#imagem {
+img.imagem {
     width: 100%;
     height: 100%;
     border-top-left-radius: 20px;

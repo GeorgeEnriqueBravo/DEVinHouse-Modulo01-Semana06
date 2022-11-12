@@ -1,53 +1,50 @@
-let res = document.querySelector('div#res')
-let img = document.querySelector('img#imagem')
-let nome = document.querySelector('p#nome')
-let email = document.querySelector('p#email')
-let endereco = document.querySelector('p#endereco')
+let res = document.querySelector('div.res')
+let img = document.querySelector('img.imagem')
+let nome = document.querySelector('p.nome')
+let email = document.querySelector('p.email')
+let endereco = document.querySelector('p.endereco')
 
-async function buscaAPI() {
+const listaDivGeral = document.getElementsByClassName('geral')
+
+async function buscaAPI(index, divGeral) {
+    console.log(divGeral);
+    // console.log(divGeral.children[0].children[0]);
     try {
         const resultado = await fetch('https://randomuser.me/api/?results=4', {
             method: 'GET'
         })
-        console.log(resultado)
-
         const dados = await resultado.json()
-        console.log(dados.results[0].name)
-
         // Foto HTML
-        img.setAttribute('src', `${dados.results[0].picture.large}`);
-        // Foto console
-        console.log(`${dados.results[0].picture.large}`)
+        divGeral.children[0].children[0].setAttribute('src', `${dados.results[index].picture.large}`);
 
         // Título / Nome / Sobrenome HTML
-        nome.innerHTML = `${dados.results[0].name.title} ${dados.results[0].name.first} ${dados.results[0].name.last}`
-        // Título / Nome / Sobrenome console
-        console.log(`${dados.results[0].name.title} ${dados.results[0].name.first} ${dados.results[0].name.last}`)
+        divGeral.children[1].children[0].innerHTML = `${dados.results[index].name.title} ${dados.results[index].name.first} ${dados.results[index].name.last}`
 
         // E-mail HTML
-        email.innerHTML += `${dados.results[0].email}`
-        // E-mail console
-        console.log(`${dados.results[0].email}`)
+        divGeral.children[1].children[1].innerHTML += `${dados.results[index].email}`
 
         // Endereço completo HTML
-        endereco.innerHTML += `${dados.results[0].location.street.name} - ${dados.results[0].location.street.number} ${dados.results[0].location.city} - ${dados.results[0].location.state} - ${dados.results[0].location.country}`
-        // Endereço completo console
-        console.log(`${dados.results[0].location.street.name} - ${dados.results[0].location.street.number} ${dados.results[0].location.city} - ${dados.results[0].location.state} - ${dados.results[0].location.country}`)
+        divGeral.children[1].children[2].innerHTML += `${dados.results[index].location.street.name} - ${dados.results[index].location.street.number} ${dados.results[index].location.city} - ${dados.results[index].location.state} - ${dados.results[index].location.country}`
+
 
     } catch(erro) {
 
     }
 }
-buscaAPI()
+
+for (let i = 0; i < listaDivGeral.length; i++) {
+    buscaAPI(i, listaDivGeral[i])
+}
+// buscaAPI(0, listaDivGeral[0])
+// buscaAPI(1, listaDivGeral[1])
+// buscaAPI(2, listaDivGeral[2])
+// buscaAPI(3, listaDivGeral[3])
 
 // Evento click para mostrar e esconder NOME
 const checkNome = document.querySelector("input#checkNome")
 
 checkNome.addEventListener('click', (event) => {
-    console.log(event)
-    console.log(event.target)
-    console.log(event.target.checked)
-    const paragrafo = document.querySelector('p#nome')
+    const paragrafo = document.getElementsByClassName('nome')
     const checado = event.target.checked
 
     if (checado) {
@@ -63,7 +60,7 @@ checkNome.addEventListener('click', (event) => {
 const checkEmail = document.querySelector('input#checkEmail')
 
 checkEmail.addEventListener('click', (event) => {
-    const paragrafo = document.querySelector('p#email')
+    const paragrafo = document.getElementsByClassName('email')
     const checado = event.target.checked
 
     if (checado) {
@@ -79,7 +76,7 @@ checkEmail.addEventListener('click', (event) => {
 const checkEnd = document.querySelector('input#checkEnd')
 
 checkEnd.addEventListener('click', (event) => {
-    const paragrafo = document.querySelector('p#endereco')
+    const paragrafo = document.getElementsByClassName('endereco')
     const checado = event.target.checked
 
     if (checado) {

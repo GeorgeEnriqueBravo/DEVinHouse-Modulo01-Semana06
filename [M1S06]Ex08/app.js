@@ -59,9 +59,6 @@ const criaElemento = (tipo, texto) => {
   const numUsuarios = document.getElementById('numUsuarios')
   numUsuarios.addEventListener('change', (event) => buscaAPI(event.target.value))
 
-///////////////////////////////////////////////////////////////
-
-// Evento click para mostrar ou esconder NOME
 const checkNome = document.querySelector('input#checkNome')
 
 checkNome.addEventListener('click', (event) => {
@@ -80,15 +77,12 @@ checkNome.addEventListener('click', (event) => {
     }
 })
 
-// Evento click para mostrar ou esconder E-MAIL
 const checkEmail = document.querySelector('input#checkEmail')
 
 checkEmail.addEventListener('click', (event) => {
     const endereco = document.getElementsByClassName('classEmail')
-    console.log(endereco)
 
     const checado = event.target.checked
-    console.log(checado)
 
     for (let i = 0; i < endereco.length; i++) {
         if (checado) {
@@ -99,15 +93,12 @@ checkEmail.addEventListener('click', (event) => {
     }
 })
 
-// Evento click para mostrar ou ocultar o Endereço
 const checkEnd = document.querySelector('input#checkEnd')
 
 checkEnd.addEventListener('click', (event) => {
     const endereco = document.getElementsByClassName('classEnd')
-    // console.log(endereco)
 
     const checado = event.target.checked
-    // console.log(checado)
 
     for (let i = 0; i < endereco.length; i++) {
         if (checado) {

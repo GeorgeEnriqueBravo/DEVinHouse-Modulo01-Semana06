@@ -11,8 +11,11 @@ async function buscaAPI() {
         //
         // fazendo com { data }, já desestruturamos diretamente o data lá do fetch, fazendo com que pudéssemos digitar abaixo diretamente data.symbol e data.priceUsd apenas, sem precisar do nome da variável antes.
 
+        const res = document.getElementById('res')
+        res.innerHTML += `O preço do Bitcoin - ${dados.data.symbol} em dólares hoje é $${Number(dados.data.priceUsd).toFixed(2)}.`
+
         
-        console.log(`O preço do Bitcoin - ${dados.data.symbol} em dólares hoje é $${dados.data.priceUsd}.`)
+        console.log(`O preço do Bitcoin - ${dados.data.symbol} em dólares hoje é $${Number(dados.data.priceUsd).toFixed(2)}.`)
 
     } catch(erro) {
         console.error(`Erro: ${erro}`)

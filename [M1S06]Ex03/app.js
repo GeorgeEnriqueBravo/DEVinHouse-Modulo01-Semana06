@@ -20,7 +20,19 @@ const cliente = { cpf: 11111111111, nome: 'Calleri', margem: 1000.0 };
 const aprovacaoCadastro = aprovarDadosCadastrais(cliente);
 const aprovacaoValor = aprovarValorSolicitado(cliente, 300.0);
 
+
+const res = document.getElementById('res')
+
 Promise.all([aprovacaoCadastro, aprovacaoValor])
-    .then(() => console.log(`APROVADO`))
-    .catch(() => console.log(`REPROVADO`))
-    .finally(() => console.log(`Fim do Processamento`))
+    .then(() => {
+        console.log(`APROVADO`)
+        res.innerHTML = `APROVADO <br>`
+    })
+    .catch(() => {
+        console.log(`REPROVADO`)
+        res.innerHTML = `REPROVADO <br>`
+    })
+    .finally(() => {
+        console.log(`Fim do Processamento`)
+        res.innerHTML += `Fim do Processamento`
+    })

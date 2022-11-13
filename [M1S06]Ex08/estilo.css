@@ -17,46 +17,37 @@ section {
 div {
     text-align: center;
 }
-div.code {
-    font-family: Consolas,"courier new";
-    background-color: #e0e3e8;
-    padding: 12px;
-    font-size: 100%;
+div#titulo ol li, p {
     text-align: left;
 }
-span.code {
-    font-family: Consolas,"courier new";
-    background-color: #e0e3e8;
-    font-size: 105%;
-    text-align: left;
+div#res {
+    display: flex;
+    flex-direction: column;
 }
-div ol li, p {
-    text-align: left;
-}
-div.geral {
+div.divUsuario {
     display: flex;
     justify-content: flex-start;
     background-color: rgb(70, 142, 236);
     color: white;
     font-size: 16.5px;
     border-radius: 20px;
-    margin: 5px;
+    margin-bottom: -30px;
 }
-div.divImg {
-    width: 20%;
-}
-div.res {
+div.texto {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 15px;
-    width: 80%;
+}
+select {
+  font-size: medium;
+  padding: 3px;
+  background-color: black;
+  color: white;
 }
 div#botoes {
-    margin-top: 10px;
+    margin-top: 25px;
 }
-img.imagem {
-    width: 100%;
-    height: 100%;
+img {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -76,10 +67,4 @@ footer a {
 }
 footer p {
     text-align: center;
-}
-.mostrar {
-    display: block;
-}
-.ocultar {
-    display: none;
 }

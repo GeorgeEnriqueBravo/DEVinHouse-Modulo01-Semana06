@@ -3,8 +3,8 @@ let res = document.getElementById('res')
 function sleep(valor) {
     return new Promise ( (resolve, reject) => { 
        setTimeout(() => {
-          res.innerHTML = `O valor passado foi ${valor}`
-          resolve(console.log(`O valor passado foi ${valor}`)) 
+          res.innerHTML = `O valor passado foi: ${valor}`
+          resolve(console.log(`O valor passado foi: ${valor}`)) 
        }, 3000)
     })
   }

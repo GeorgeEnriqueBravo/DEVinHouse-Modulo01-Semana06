@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S06- Ex08</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>S06- Ex8</title>
+    <link rel="stylesheet" href="./estilo.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
@@ -19,85 +19,53 @@
             <strong>Fetch</strong>
         </div>
         <hr>
-        <div>
-            <p>Existe a API 'Random User Generator', que gera usuários fakes para fins de testes e protótipos. <br>
-            Vamos usá-la para praticar e consumir APIs com promises.</p>
+        <div id="titulo">
+              <p>Existe a API 'Random User Generator', que gera usuários fakes para fins de testes e protótipos. <br>
+              Vamos usá-la para praticar e consumir APIs com promises.</p>
 
-            <p>A URL da API é esta abaixo, onde o argumento 'results' representa a quantidade de resultados que queremos retornar: <br>
-            <a href="https://randomuser.me/api/?results=4" target="_blank" rel="noopener noreferrer">https://randomuser.me/api/?results=4</a></p>
+              <p>A URL da API é esta abaixo, onde o argumento 'results' representa a quantidade de resultados que queremos retornar: <br>
+              <a href="https://randomuser.me/api/?results=4" target="_blank" rel="noopener noreferrer">https://randomuser.me/api/?results=4</a></p>
 
-            <p>Verifique a documentação e exemplo de retorno em: <br>
-            <a href="https://randomuser.me/documentation#howto" target="_blank" rel="noopener noreferrer">Random User Generator | Documentation</a>, ou faça uma chamada para a API (no navegador ou console) para verificar um exemplo de resultado.</p>
+              <p>Verifique a documentação e exemplo de retorno em: <br>
+              <a href="https://randomuser.me/documentation#howto" target="_blank" rel="noopener noreferrer">Random User Generator | Documentation</a>, ou faça uma chamada para a API (no navegador ou console) para verificar um exemplo de resultado.</p>
 
-            <p>Com base no json de retorno, monte uma página web com layout semelhante ao <strong>anexo</strong>, contendo dados de usuários de sistema com
-            foto, título, nome, sobrenome, e-mail e endereço completo. <br>
-            O layout (css) é livre, desde que apresente as informações solicitadas.</p>
+              <p>Com base no json de retorno, monte uma página web com layout semelhante ao <strong>anexo</strong>, contendo dados de usuários de sistema com
+              foto, título, nome, sobrenome, e-mail e endereço completo. <br>
+              O layout (css) é livre, desde que apresente as informações solicitadas.</p>
 
-            <p><strong>Dicas:</strong></p>
+              <p><strong>Dicas:</strong></p>
 
-            <ol type="a">
-                <li>Perceba que os resultados ficam dentro do campo 'results' do json de retorno;</li><br>
-                <li>Para a foto, use a versão grande do campo 'picture': 'large' (grande);</li><br>
-                <li>Para o nome, use os campos de 'name': 'title' (título), 'first' (nome), 'last' (sobrenome);</li><br>
-                <li>Para o endereço, use os campos de 'location': 'street' (rua), 'city' (cidade), 'state' (estado), 'country' (país);</li><br>
-                <li>Como é uma chamada remota para o serviço, o resultado pode demorar alguns segundos para retornar.</li>
-            </ol>
+              <ol type="a">
+                  <li>Perceba que os resultados ficam dentro do campo 'results' do json de retorno;</li><br>
+                  <li>Para a foto, use a versão grande do campo 'picture': 'large' (grande);</li><br>
+                  <li>Para o nome, use os campos de 'name': 'title' (título), 'first' (nome), 'last' (sobrenome);</li><br>
+                  <li>Para o endereço, use os campos de 'location': 'street' (rua), 'city' (cidade), 'state' (estado), 'country' (país);</li><br>
+                  <li>Como é uma chamada remota para o serviço, o resultado pode demorar alguns segundos para retornar.</li>
+              </ol>
 
-            <p><strong>Extra:</strong></p>
+              <p><strong>Extra:</strong></p>
 
-            <p>Adicione um campo para que o usuário selecione a quantidade de itens que deseja exibir</p>
+              <p>Adicione um campo para que o usuário selecione a quantidade de itens que deseja exibir</p>
+          </div>
         <hr>
-        <div><strong>Usuários do sistema</strong> </div>
+        <div>
+            <strong>Usuários do sistema</strong>
 
-        <div id="pai">
+            <select id="numUsuarios">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div id="res">
 
-            <div class='geral'> 
-                <div class="divImg">
-                    <img class="imagem">
-                </div>
-    
-                <div class="res">
-                    <p class="nome"></p>
-                    <p class="email"></p>
-                    <p class="endereco"></p>
-                </div>
-            </div>
-
-            <div class='geral'> 
-                <div class="divImg">
-                    <img class="imagem">
-                </div>
-    
-                <div class="res">
-                    <p class="nome"></p>
-                    <p class="email"></p>
-                    <p class="endereco"></p>
-                </div>
-            </div>
-
-            <div class='geral'> 
-                <div class="divImg">
-                    <img class="imagem">
-                </div>
-    
-                <div class="res">
-                    <p class="nome"></p>
-                    <p class="email"></p>
-                    <p class="endereco"></p>
-                </div>
-            </div>
-
-            <div class='geral'> 
-                <div class="divImg">
-                    <img class="imagem">
-                </div>
-    
-                <div class="res">
-                    <p class="nome"></p>
-                    <p class="email"></p>
-                    <p class="endereco"></p>
-                </div>
-            </div>
         </div>
 
         <div id="botoes">
@@ -130,6 +98,7 @@
         </a>
     </footer>
     
-    <script src="app.js" type="module"></script>
+    <script src="./app.js" async></script>
+
 </body>
 </html>

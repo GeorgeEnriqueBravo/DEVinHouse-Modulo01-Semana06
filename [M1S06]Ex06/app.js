@@ -33,7 +33,7 @@ async function buscaAPI(nome) {
         } else {
             res.innerHTML = `O nome ${dados.name.substr(0,1).toUpperCase()}${dados.name.slice(1)}, tem a idade média de ${dados.age} anos no Brasil.`
 
-            console.log(`O nome ${dados.name.substr(0,1).toUpperCase()}${dados.name.slice(1)}, tem a idade média de ${dados.age}anos no Brasil.`)
+            console.log(`O nome ${dados.name.substr(0,1).toUpperCase()}${dados.name.slice(1)}, tem a idade média de ${dados.age} anos no Brasil.`)
         }
 
     } catch(erro) {
